@@ -2,3 +2,8 @@ Güncel olan ne? Tek şey değil, çok şey var. Buraya yazmaya devam edersem ne
 
 Evet devam ediyorum. Güncel olan ne var. Adını yazmak istemediğim kadar üzücü şeyler var elbet.
 
+GİT'İN AŞAMALARI 
++ git add yeni-dosya (ya da edit edilmiş dosya)
++ git commit -m "mesajını yaz"
++ git push origin main
++ git pull origin main
