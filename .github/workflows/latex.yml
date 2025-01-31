@@ -19,11 +19,11 @@ jobs:
     - name: Compile LaTeX to PDF
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: paper.tex  # Change this to your .tex file
+        root_file: sample.tex  # Change this to your .tex file
         latexmk_use_lualatex: true  # Optional, if you prefer LuaLaTeX
 
     - name: Upload PDF
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4  # Updated to v4
       with:
         name: compiled-pdf
-        path: paper.pdf  # Replace with the name of your output PDF file
+        path: sample.pdf  # Replace with the name of your output PDF file
