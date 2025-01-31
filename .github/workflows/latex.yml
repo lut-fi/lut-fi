@@ -1,0 +1,29 @@
+name: Build LaTeX document
+
+on:
+  push:
+    branches:
+      - main  # Use your default branch name if it's different
+  pull_request:
+    branches:
+      - main  # Adjust if needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Compile LaTeX to PDF
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: paper.tex  # Change this to your .tex file
+        latexmk_use_lualatex: true  # Optional, if you prefer LuaLaTeX
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v3
+      with:
+        name: compiled-pdf
+        path: paper.pdf  # Replace with the name of your output PDF file
